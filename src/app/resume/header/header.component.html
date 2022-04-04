@@ -16,11 +16,24 @@
   </div>
 
   <div class="flex flex-col h-2/5 gap-5">
-    <div class="h-12 font-bold text-3xl font-medium text-stone-700">
-      Contact Detail
+    <div class="h-12 font-bold text-2xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400">
+     Contact Details
     </div>
-    <div>
-      <span class="material-icons-outlined"> home </span>
+    <div class="flex gap-2" *ngFor="let detailImage of withImages">
+        <img class="h-6 w-6" [src]="detailImage.image" alt="detailImage.name" > 
+        <span>{{detailImage.name}}:</span>
+        <a class="text-blue-600 hover:text-blue-400" [href]="detailImage.data">{{detailImage.data}}</a>
+    </div>
+    <div class="flex gap-2" *ngFor="let detailIcon of withIcon">
+        <mat-icon>{{detailIcon.icon}}</mat-icon>
+        <span>{{detailIcon.name}}:</span>
+       <div *ngIf="detailIcon.hasLink else noLink" class="text-blue-600 hover:text-blue-400">
+        <a [href]="detailIcon.mailTo">{{detailIcon.data}}</a>
+       </div>
+
+       <ng-template #noLink>
+           <div>{{detailIcon.data}}</div>
+       </ng-template>
     </div>
   </div>
 </div>
