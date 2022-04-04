@@ -1,4 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  HostBinding,
+} from '@angular/core';
 
 interface Detail {
   name: string;
@@ -16,6 +21,8 @@ interface Detail {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
+  @HostBinding('class') class = 'h-screen';
+
   aboutMe =
     'I am a junior front-end developer with one year of experience, currently working with Typescript, HTML/CSS, passion about learning and buiding delightful and scalable web applications, fascinated of learning new knowledges to imporve my technical skills.';
 
@@ -34,7 +41,7 @@ export class HeaderComponent implements OnInit {
       data: 'New Taipei, Taiwan',
     },
     {
-      name: 'Nationalities',
+      name: 'Nationality',
       icon: 'public',
       data: 'South Africa, Taiwan',
     },
