@@ -22,7 +22,7 @@
     <div class="flex gap-2" *ngFor="let detailImage of withImages">
         <img class="h-6 w-6" [src]="detailImage.image" alt="detailImage.name" > 
         <span>{{detailImage.name}}:</span>
-        <a class="text-blue-600 hover:text-blue-400" [href]="detailImage.data">{{detailImage.data}}</a>
+        <a target="_blank" class="text-blue-600 hover:text-blue-400" [href]="detailImage.data">{{detailImage.data}}</a>
     </div>
     <div class="flex gap-2" *ngFor="let detailIcon of withIcon">
         <mat-icon>{{detailIcon.icon}}</mat-icon>
