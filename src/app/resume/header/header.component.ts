@@ -29,7 +29,7 @@ export class HeaderComponent implements OnInit {
   withIcon: Detail[] = [
     {
       name: 'Email',
-      icon: 'local_post_office',
+      icon: 'email',
       data: 'gswliang@gmail.com',
       mailTo: 'mailto:gswliang@gmail.com',
       hasLink: true,
