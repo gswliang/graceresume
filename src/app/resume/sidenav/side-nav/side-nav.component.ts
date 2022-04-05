@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 interface SideNav {
   icon: string;
@@ -10,7 +10,7 @@ interface SideNav {
   styleUrls: ['./side-nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent {
   sideNav: SideNav[] = [
     { icon: 'perm_identity', name: 'About me' },
     {
@@ -26,8 +26,5 @@ export class SideNavComponent implements OnInit {
       name: 'Projects',
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
+  openNav = false;
 }
