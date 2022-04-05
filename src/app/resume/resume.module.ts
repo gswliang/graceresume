@@ -5,10 +5,11 @@ import { ResumeRoutingModule } from './resume-routing.module';
 import { ResumeComponent } from './resume.component';
 import { HeaderComponent } from './header/header.component';
 import { MatIconModule } from '@angular/material/icon';
+import { SideNavComponent } from './sidenav/side-nav/side-nav.component';
 
 @NgModule({
-  declarations: [ResumeComponent, HeaderComponent],
+  declarations: [ResumeComponent, HeaderComponent, SideNavComponent],
   imports: [CommonModule, ResumeRoutingModule, MatIconModule],
-  exports: [HeaderComponent],
+  exports: [HeaderComponent, SideNavComponent],
 })
 export class ResumeModule {}
