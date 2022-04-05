@@ -1,6 +1,11 @@
-<div class="h-full flex flex-col w-40 bg-zinc-800 gap-10 pt-14 pl-2" >
-    <div class="flex text-neutral-50 cursor-pointer justify-start gap-2 hover:animate-bounce " *ngFor="let sidenav of sideNav">
-        <mat-icon class="font-md">{{sidenav.icon}}</mat-icon>
-        <span class="text-lg">{{sidenav.name}}</span>
+<div class="h-full flex flex-col w-36 bg-zinc-800">
+  <div
+    class="flex h-20 text-white cursor-pointer justify-start gap-2 hover:bg-zinc-700 duration-500"
+    *ngFor="let sidenav of sideNav"
+  >
+    <div class="flex items-center pl-3">
+      <mat-icon>{{ sidenav.icon }}</mat-icon>
     </div>
+    <span class="text-lg flex items-center">{{ sidenav.name }}</span>
+  </div>
 </div>
