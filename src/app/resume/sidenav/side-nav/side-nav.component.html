@@ -1,19 +1,20 @@
-<div class="h-full flex flex-col w-full md:w-36 bg-zinc-800">
+<div class="h-full flex flex-col w-full md:w-36 bg-blue-500">
   <div
-    class="text-white w-full h-14 cursor-pointer ml-auto duration-500 z-[1] ease-in-out flex justify-end pr-7 items-center md:hidden"
+    class="text-white w-full h-14 cursor-pointer border-b-2 border-white ml-auto duration-500 z-[1] ease-in-out flex justify-end pr-7 items-center md:hidden"
     (click)="openNav = !openNav"
   >
     <mat-icon class="scale-150">{{ openNav ? "close" : "menu" }}</mat-icon>
   </div>
   <div
-    class="w-full absolute top-[-320px] transition-all ease-in-out duration-500 bg-zinc-800 md:static"
+    class="w-full absolute top-[-320px] transition-all ease-in-out duration-500 bg-blue-500 md:static"
     [class.top-[55px]]="openNav"
   >
     <div
-      class="flex h-20 text-white cursor-pointer justify-start gap-2 hover:bg-zinc-700 duration-500"
+      class="flex h-20 text-white cursor-pointer pl-8 md:px-4 justify-start gap-2 hover:scale-105 duration-300"
       *ngFor="let sidenav of sideNav"
+      (click)="onClick(sidenav?.data)"
     >
-      <div class="flex items-center pl-3">
+      <div class="flex items-center">
         <mat-icon>{{ sidenav.icon }}</mat-icon>
       </div>
       <span class="text-lg flex items-center">{{ sidenav.name }}</span>
