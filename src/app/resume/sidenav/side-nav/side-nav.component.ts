@@ -17,7 +17,7 @@ export class SideNavComponent {
     { icon: 'perm_identity', name: 'About me', data: 'about' },
     {
       icon: 'build',
-      name: 'Skills & Experience',
+      name: 'Skills / Experience',
       data: 'skills',
     },
     {
