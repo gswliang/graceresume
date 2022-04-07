@@ -1,12 +1,12 @@
 <div class="h-full flex flex-col w-full md:w-36 bg-blue-500">
   <div
-    class="text-white w-full h-14 cursor-pointer border-b-2 border-white ml-auto duration-500 z-[1] ease-in-out flex justify-end pr-7 items-center md:hidden"
+    class="text-white w-full h-14 cursor-pointer border-b-2 border-white ml-auto duration-500 ease-in-out flex justify-end pr-7 items-center md:hidden"
     (click)="openNav = !openNav"
   >
     <mat-icon class="scale-150">{{ openNav ? "close" : "menu" }}</mat-icon>
   </div>
   <div
-    class="w-full absolute top-[-320px] transition-all ease-in-out duration-500 bg-blue-500 md:static"
+    class="w-full absolute top-[-320px] z-[-1] transition-all ease-in-out duration-500 bg-blue-500 md:static md:z-[1]"
     [class.top-[55px]]="openNav"
   >
     <div
