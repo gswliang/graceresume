@@ -7,10 +7,16 @@ import { HeaderComponent } from './header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SideNavComponent } from './sidenav/side-nav/side-nav.component';
 import { SkillsComponent } from './skills/skills.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [ResumeComponent, HeaderComponent, SideNavComponent, SkillsComponent],
-  imports: [CommonModule, ResumeRoutingModule, MatIconModule],
+  declarations: [
+    ResumeComponent,
+    HeaderComponent,
+    SideNavComponent,
+    SkillsComponent,
+  ],
+  imports: [CommonModule, ResumeRoutingModule, MatIconModule, HttpClientModule],
   exports: [HeaderComponent, SideNavComponent],
 })
 export class ResumeModule {}

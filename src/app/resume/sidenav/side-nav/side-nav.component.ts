@@ -16,9 +16,14 @@ export class SideNavComponent {
   sideNav: SideNav[] = [
     { icon: 'perm_identity', name: 'About me', data: 'about' },
     {
+      icon: 'terminal',
+      name: 'Skills / Plans',
+      data: 'skillsPlan',
+    },
+    {
       icon: 'build',
-      name: 'Skills / Experience',
-      data: 'skills',
+      name: 'Experience',
+      data: 'experience',
     },
     {
       icon: 'category',
