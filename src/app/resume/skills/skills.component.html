@@ -4,14 +4,17 @@
   >
     Skills
   </div>
-  <div class="h-auto w-auto">
+  <div class="h-auto w-auto shadow-xl bg-stone-50">
     <div
-      class="font-bold h-20 text-xl font-medium text-stone-600 underline underline-offset-8 decoration-red-400"
+      class="font-bold pl-6 h-16 text-xl font-medium text-stone-600 underline underline-offset-8 decoration-red-400"
     >
-      Currently Focus On:
+      Focus On:
     </div>
     <div class="flex gap-3 flex-wrap">
-      <div *ngFor="let focus of focusSkills" class="h-28 w-28">
+      <div
+        *ngFor="let focus of focusSkills"
+        class="h-28 w-28 hover:animate-wiggle"
+      >
         <mat-icon [svgIcon]="focus.icon"></mat-icon>
       </div>
     </div>
