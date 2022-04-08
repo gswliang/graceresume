@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 interface SideNav {
@@ -13,6 +13,7 @@ interface SideNav {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideNavComponent {
+  @HostBinding('class') class = 'z-[1]';
   sideNav: SideNav[] = [
     { icon: 'perm_identity', name: 'About me', data: 'about' },
     {
@@ -39,6 +40,7 @@ export class SideNavComponent {
   ) {}
 
   onClick(selectedPath: string | undefined) {
+    this.openNav = !this.openNav;
     if (!selectedPath) {
       return;
     }
