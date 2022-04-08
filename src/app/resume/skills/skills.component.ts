@@ -1,13 +1,11 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })
-export class SkillsComponent implements OnInit {
+export class SkillsComponent {
   @HostBinding('class') class = 'h-screen w-screen overflow-x-hidden';
 
   focusSkills = [
@@ -24,23 +22,4 @@ export class SkillsComponent implements OnInit {
   ];
 
   usedToworkWith = [{ name: 'React', icon: 'react' }];
-
-  constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
-  ) {}
-
-  ngOnInit() {
-    this.focusSkills = this.focusSkills.map((skill) => {
-      return { ...skill, iconReg: this.registerSVGIcon(skill.icon) };
-    });
-  }
-
-  registerSVGIcon(icon: string) {
-    const iconUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(
-      `assets/icons/${icon}.svg`
-    );
-
-    return this.matIconRegistry.addSvgIcon(icon, iconUrl);
-  }
 }
