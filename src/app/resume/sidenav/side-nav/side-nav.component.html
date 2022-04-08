@@ -3,11 +3,13 @@
     class="text-white w-full h-14 cursor-pointer border-b-2 border-white ml-auto duration-500 ease-in-out flex justify-end pr-7 items-center md:hidden"
     (click)="openNav = !openNav"
   >
-    <mat-icon class="scale-150">{{ openNav ? "close" : "menu" }}</mat-icon>
+    <mat-icon class="scale-150 transition-all ease-in-out duration-500">{{
+      openNav ? "close" : "menu"
+    }}</mat-icon>
   </div>
   <div
     class="w-full absolute top-[-320px] z-[-1] transition-all ease-in-out duration-500 bg-blue-500 md:static md:z-[1]"
-    [class.top-[55px]]="openNav"
+    [class.top-14]="openNav"
   >
     <div
       class="flex h-20 text-white cursor-pointer pl-8 md:px-4 justify-start gap-2 hover:scale-105 duration-300"
