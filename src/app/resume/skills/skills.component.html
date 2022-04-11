@@ -1,21 +1,66 @@
-<div class="pt-2 w-4/5 h-auto mx-auto md:mt-10">
-  <div
-    class="font-bold h-20 text-4xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400"
-  >
-    Skills
-  </div>
-  <div class="h-auto w-auto shadow-xl bg-stone-50">
-    <div
-      class="font-bold pl-6 h-16 text-xl font-medium text-stone-600 underline underline-offset-8 decoration-red-400"
-    >
-      Focus On:
+<div class="pt-2 mx-10 flex flex-col h-auto mx-auto">
+  <div class="mt-4">
+    <div class="title">Skills</div>
+    <div class="card-container">
+      <div class="card shadow-xl">
+        <div class="flex justify-center gap-3 flex-wrap">
+          <div
+            *ngFor="let focus of focusSkills"
+            class="h-28 w-28 flex justify-center items-center hover:animate-wiggle"
+          >
+            <mat-icon [svgIcon]="focus.icon"></mat-icon>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-xl">
+        <div
+          class="font-bold pl-6 h-8 text-xl font-medium text-stone-600 underline underline-offset-8 decoration-red-400"
+        >
+          Focus On:
+        </div>
+        <div class="mt-4">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus itaque voluptatum repellat asperiores perferendis?
+          Accusamus aspernatur quisquam veniam neque ipsum optio, quo eaque,
+          laboriosam omnis aliquam, adipisci blanditiis error perferendis?
+        </div>
+      </div>
     </div>
-    <div class="flex gap-3 flex-wrap">
-      <div
-        *ngFor="let focus of focusSkills"
-        class="h-28 w-28 hover:animate-wiggle"
-      >
-        <mat-icon [svgIcon]="focus.icon"></mat-icon>
+  </div>
+  <div class="my-4">
+    <div class="title mt-6">Plans</div>
+    <div class="card-container">
+      <div class="card shadow-xl">
+        <div class="flex justify-center gap-3 flex-wrap">
+          <div
+            *ngFor="let plan of planToLearn"
+            class="h-28 w-28 flex justify-center items-center hover:animate-wiggle"
+          >
+            <mat-icon
+              *ngIf="plan.icon; else useImage"
+              [svgIcon]="plan.icon"
+            ></mat-icon>
+
+            <ng-template #useImage>
+              <img [src]="plan.image" [alt]="plan.name" />
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-xl">
+        <div
+          class="font-bold pl-6 h-8 text-xl font-medium text-stone-600 underline underline-offset-8 decoration-red-400"
+        >
+          Focus On:
+        </div>
+        <div class="mt-4">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus itaque voluptatum repellat asperiores perferendis?
+          Accusamus aspernatur quisquam veniam neque ipsum optio, quo eaque,
+          laboriosam omnis aliquam, adipisci blanditiis error perferendis?
+        </div>
       </div>
     </div>
   </div>

@@ -8,8 +8,6 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = "Grace's Resume";
-
   constructor(
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer

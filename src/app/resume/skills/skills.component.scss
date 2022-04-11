@@ -1,4 +1,18 @@
 .mat-icon {
-  height: 100px;
-  width: 100px;
+  height: 6rem;
+  width: 6rem;
+}
+
+@layer component {
+  .card {
+    @apply flex h-auto flex-col w-11/12 p-4 bg-white mx-auto rounded-lg;
+  }
+
+  .card-container {
+    @apply flex gap-3 flex-wrap md:flex-nowrap;
+  }
+
+  .title {
+    @apply font-bold h-20 text-4xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400;
+  }
 }
