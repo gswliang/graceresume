@@ -17,12 +17,12 @@
         <div class="mt-4 p-1">
           <div
             *ngFor="let focus of focusOn"
-            class="flex h-8 text-stone-600/100 text-md h-14 gap-2"
+            class="grid grid-rows-1 text-stone-600/100 text-md my-2 md:my-6"
           >
-            <div class="flex">
+            <div class="flex gap-1">
               <mat-icon>schedule</mat-icon>
+              <span>{{ focus.point }}</span>
             </div>
-            <div>{{ focus.point }}</div>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
   </div>
 
   <div class="title">Plans</div>
-  <div class="mt-4 shadow-xl bg-white h-full">
+  <div class="mt-4 shadow-xl bg-white h-full mb-6">
     <div class="card-container">
       <div class="card">
         <div class="grid grid-cols-3 gap-3">
@@ -54,13 +54,13 @@
       <div class="card">
         <div class="mt-4 p-1">
           <div
-            *ngFor="let focus of focusOn"
-            class="flex h-8 text-stone-600/100 text-md h-14 gap-2"
+            *ngFor="let plan of plansDescription"
+            class="grid grid-rows-1 text-stone-600/100 text-md my-2 md:my-6"
           >
-            <div class="flex">
+            <div class="flex gap-1">
               <mat-icon>schedule</mat-icon>
+              <span>{{ plan.plan }}</span>
             </div>
-            <div>{{ focus.point }}</div>
           </div>
         </div>
       </div>
