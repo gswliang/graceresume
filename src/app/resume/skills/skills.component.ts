@@ -33,4 +33,25 @@ export class SkillsComponent {
       image: 'assets/icons/leetcode.png',
     },
   ];
+
+  focusOn = [
+    {
+      point: 'Currently work with Angular,Typescript,RxJS in daily basis.',
+    },
+    {
+      point:
+        'I work with CSS/SCSS at work and TailwindCSS for my own side projects.',
+    },
+    {
+      point:
+        'Learning to combine Angular Material and TaiwindCSS with better approaches.',
+    },
+
+    {
+      point:
+        'Building a handy and customizable image magnifier component with npm.',
+    },
+  ];
+
+  plansDescription = [];
 }
