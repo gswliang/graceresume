@@ -1,18 +1,22 @@
-.mat-icon {
-  height: 6rem;
-  width: 6rem;
+.skills {
+  height: 5rem;
+  width: 5rem;
 }
 
 @layer component {
   .card {
-    @apply flex h-auto flex-col w-11/12 p-4 bg-white mx-auto rounded-lg;
+    @apply flex flex-col w-11/12 p-2 mx-auto rounded-lg;
   }
 
   .card-container {
-    @apply flex gap-3 flex-wrap md:flex-nowrap;
+    @apply flex flex-wrap md:flex-nowrap ml-2;
   }
 
   .title {
-    @apply font-bold h-20 text-4xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400;
+    @apply mt-4 font-bold h-12 text-2xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400;
+  }
+
+  .card-grid {
+    @apply grid grid-cols-3 gap-3;
   }
 }
