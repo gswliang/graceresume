@@ -4,6 +4,7 @@
   >
     <img
       class="flex-none rounded-full h-36 w-36 pt-3 md:h-44 md:w-44"
+      loading="lazy"
       src="/assets/grace.jpeg"
       alt="grace"
     />
@@ -28,7 +29,12 @@
       Contact Details
     </div>
     <div class="flex gap-2" *ngFor="let detailImage of withImages$ | async">
-      <img class="h-6 w-6" [src]="detailImage.image" alt="detailImage.name" />
+      <img
+        class="h-6 w-6"
+        loading="lazy"
+        [src]="detailImage.image"
+        alt="detailImage.name"
+      />
       <span>{{ detailImage.name }}:</span>
       <a
         target="_blank"
