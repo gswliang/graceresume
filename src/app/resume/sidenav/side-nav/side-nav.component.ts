@@ -24,7 +24,7 @@ export class SideNavComponent {
     {
       icon: 'build',
       name: 'Experience Education',
-      data: 'experience',
+      data: 'education&experience',
     },
     {
       icon: 'category',

@@ -8,6 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SideNavComponent } from './sidenav/side-nav/side-nav.component';
 import { SkillsComponent } from './skills/skills.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EducationAndExperienceComponent } from './education-and-experience/education-and-experience.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     SideNavComponent,
     SkillsComponent,
+    EducationAndExperienceComponent,
   ],
   imports: [CommonModule, ResumeRoutingModule, MatIconModule, HttpClientModule],
-  exports: [HeaderComponent, SideNavComponent],
+  exports: [HeaderComponent, SideNavComponent, EducationAndExperienceComponent],
 })
 export class ResumeModule {}
