@@ -18,12 +18,12 @@ export class SideNavComponent {
     { icon: 'perm_identity', name: 'About me', data: 'about' },
     {
       icon: 'terminal',
-      name: 'Skills / Plans',
+      name: 'Skills  Plans',
       data: 'skillsPlan',
     },
     {
       icon: 'build',
-      name: 'Experience',
+      name: 'Experience Education',
       data: 'experience',
     },
     {
@@ -40,7 +40,7 @@ export class SideNavComponent {
   ) {}
 
   onClick(selectedPath: string | undefined) {
-    this.openNav = !this.openNav;
+    this.openNav = false;
     if (!selectedPath) {
       return;
     }
