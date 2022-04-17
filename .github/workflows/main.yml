@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 17.8.0
-      
+        
       
   # Cache node modules
       - name: Cache node modules
@@ -45,6 +45,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+        
+        # Setup Angular environment
+      - name: Setup Angular environment
+        run: npm install -g @angular/cli
         # Install required dependencies to build app
       - name: Install dependencies
         run: npm install
