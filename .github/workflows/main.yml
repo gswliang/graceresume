@@ -60,4 +60,4 @@ jobs:
 
        # Using npm gh page
       - name: ngh
-        run: ngh --dir=/docs
+        run: npx ngh --dir=/docs
