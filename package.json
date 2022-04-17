@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "ng deploy --base-href=https://gswliang.github.io/graceresume/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
