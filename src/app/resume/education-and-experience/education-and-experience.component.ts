@@ -12,7 +12,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EducationAndExperienceComponent implements OnInit {
-  @HostBinding('class') class = 'h-screen w-screen overflow-x-hidden';
+  @HostBinding('class') class = 'h-screen w-screen mx-20 overflow-x-hidden';
 
   constructor() {}
 
