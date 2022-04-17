@@ -32,4 +32,37 @@ export class EducationAndExperienceComponent implements OnInit {
       logo: 'assets/ncnu.png',
     },
   ];
+
+  experience = [
+    {
+      company: 'CBX Software',
+      title: 'Frontend Developer',
+      time: '2021/07 ~ Present',
+      place: 'Taipei, Taiwan',
+      description:
+        'Maintain and building new features of a Product Life Management Software, assit the frontend team to build a re-useable and scalable components based on complex structures.',
+    },
+    {
+      company: 'Plainliv Company limited Co. Ltd.',
+      title: 'Intern Embedded Software Engineer',
+      time: '2020/04 ~ 2021/02',
+      place: 'Taichung, Taiwan',
+      description:
+        'Using Nordic nRF 51822 with the sensor to detect the water quality, daily usages, electricity volts...etcs, calculated the results, work with nRF connect, sending datas from nRF 51822 (MCU) through bluetooth to cellphone APP.',
+    },
+    {
+      company: 'Sancardia Liquor Store',
+      title: 'Shop owner',
+      time: '2014/11 ~ 2017/05',
+      place: 'Pretoria, South Africa',
+      description: '',
+    },
+    {
+      company: 'Repo Wild 15 (pty) Ltd',
+      title: 'Sales Manager',
+      time: '2004/03 ~ 2014/06',
+      place: 'Pretoria, South Africa',
+      description: '',
+    },
+  ];
 }

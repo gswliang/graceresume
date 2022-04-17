@@ -22,7 +22,7 @@ export class SideNavComponent {
       data: 'skillsPlan',
     },
     {
-      icon: 'build',
+      icon: 'school',
       name: 'Experience Education',
       data: 'education&experience',
     },
