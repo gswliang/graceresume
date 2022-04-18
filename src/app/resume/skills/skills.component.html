@@ -1,4 +1,4 @@
-<div class="pt-2 mx-20 flex flex-col h-auto">
+<div class="pt-2 mx-8 flex flex-col h-auto md:mx-20">
   <div class="title">Skills</div>
   <div class="mt-4 shadow-xl bg-white h-full">
     <div class="card-container">
@@ -6,7 +6,7 @@
         <div class="card-grid">
           <div
             *ngFor="let focus of focusSkills"
-            class="h-20 w-20 flex items-center hover:animate-wiggle"
+            class="h-16 w-16 flex items-center hover:animate-wiggle md:h-20 w-20"
           >
             <mat-icon class="skills" [svgIcon]="focus.icon"></mat-icon>
           </div>
@@ -36,7 +36,7 @@
         <div class="card-grid">
           <div
             *ngFor="let plan of planToLearn"
-            class="h-20 w-20 flex items-center hover:animate-wiggle"
+            class="h-16 w-16 flex items-center hover:animate-wiggle md:h-20 w-20"
           >
             <mat-icon
               class="skills"

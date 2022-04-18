@@ -11,7 +11,8 @@ interface Skills {
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent {
-  @HostBinding('class') class = 'h-screen w-screen overflow-x-hidden';
+  @HostBinding('class') class =
+    'h-screen w-screen overflow-x-hidden mt-14 md:mt-2';
 
   focusSkills: Skills[] = [
     { name: 'Javascript', icon: 'javascript' },

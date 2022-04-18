@@ -6,7 +6,8 @@ import { Component, HostBinding, OnInit } from '@angular/core';
   styleUrls: ['./resume.component.scss'],
 })
 export class ResumeComponent implements OnInit {
-  @HostBinding('class') class = 'h-full w-full font-sans';
+  @HostBinding('class') class =
+    'flex flex-col md:flex-row h-full w-full font-sans';
 
   constructor() {}
 
