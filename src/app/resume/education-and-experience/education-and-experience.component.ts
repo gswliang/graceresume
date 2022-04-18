@@ -12,7 +12,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EducationAndExperienceComponent implements OnInit {
-  @HostBinding('class') class = 'h-screen w-screen mx-20 overflow-x-hidden';
+  @HostBinding('class') class =
+    'mx-4 md:mx-20 overflow-x-hidden relative mt-14 md:mt-2';
 
   constructor() {}
 
@@ -40,7 +41,7 @@ export class EducationAndExperienceComponent implements OnInit {
       time: '2021/07 ~ Present',
       place: 'Taipei, Taiwan',
       description:
-        'Maintain and building new features of a Product Life Management Software, assit the frontend team to build a re-useable and scalable components based on complex structures.',
+        'Maintain and building new features of a Product Life Management Software, assit the frontend teams to build different re-useable and scalable components based on complex structures.',
     },
     {
       company: 'Plainliv Company limited Co. Ltd.',

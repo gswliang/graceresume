@@ -14,7 +14,7 @@ import { ResumeServiceService } from '../serivce/resume-service.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent implements OnInit {
-  @HostBinding('class') class = 'h-screen';
+  @HostBinding('class') class = 'h-screen mt-14';
 
   aboutMe$ = this.resumeService.myDetails$.pipe(pluck('about'));
   withIcon$ = this.resumeService.myDetails$.pipe(pluck('icon'));

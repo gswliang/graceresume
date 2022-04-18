@@ -1,10 +1,6 @@
-<div class="pt-2 flex mt-2 flex-col h-auto md:mt-4">
+<div class="pt-2 flex mt-2 flex-col h-auto no-scrollbar md:mt-4">
   <div class="flex flex-col mb-4">
-    <h2
-      class="h-12 font-bold text-3xl px-8 font-medium text-stone-700 underline underline-offset-8 decoration-blue-400"
-    >
-      Education
-    </h2>
+    <p class="container-title text-2xl md:text-3xl md:px-8">Education</p>
     <div class="mt-8 flex gap-12 flex-wrap">
       <div
         *ngFor="let edu of education"
@@ -33,24 +29,20 @@
   </div>
 
   <div class="flex flex-col my-8">
-    <h2
-      class="h-12 px-8 font-bold text-3xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400"
-    >
-      Experience
-    </h2>
+    <p class="container-title text-2xl md:text-3xl md:px-8">Experience</p>
 
-    <div class="flex flex-col px-8 mt-4">
-      <div *ngFor="let exp of experience" class="flex gap-4 mb-8">
+    <div class="flex flex-col md:px-8 mt-4">
+      <div *ngFor="let exp of experience" class="flex gap-2 md:gap-4 mb-8">
         <mat-icon>groups</mat-icon>
         <div class="flex flex-col gap-2">
-          <h2 class="text-2xl text-teal-600">
+          <p class="text-lg md:text-2xl text-teal-600">
             {{ exp.company }} - {{ exp.title }}
-          </h2>
-          <div class="flex text-xl space-x-6 text-gray-400">
-            <h3>{{ exp.time }}</h3>
-            <h3>{{ exp.place }}</h3>
+          </p>
+          <div class="flex text-md md:text-xl space-x-6 text-gray-400">
+            <p>{{ exp.time }}</p>
+            <p class="m-0">{{ exp.place }}</p>
           </div>
-          <div class="text-xl text-gray-700 leading-8">
+          <div class="text-md md:text-xl text-gray-700 leading-8">
             {{ exp.description }}
           </div>
         </div>

@@ -13,7 +13,7 @@ interface SideNav {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideNavComponent {
-  @HostBinding('class') class = 'z-[1]';
+  @HostBinding('class') class = 'z-[1] relative';
   sideNav: SideNav[] = [
     { icon: 'perm_identity', name: 'About me', data: 'about' },
     {
