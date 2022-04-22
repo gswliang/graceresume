@@ -12,14 +12,14 @@ export class ProjectsComponent {
 
   projects = [
     {
-      name: 'My Resume - English',
+      name: 'My Resume - English Version',
       image: 'assets/project-images/resume-eng.png',
       description:
         "This project is implemented with Angular 13 and TailwindCSS, an English version of Grace's resume.",
       url: 'https://grace-resume.netlify.app/',
     },
     {
-      name: 'My Resume - Mandarin',
+      name: 'My Resume - Mandarin Version',
       image: 'assets/project-images/resume-cht.png',
       description:
         "The resume is implemented with React and plain CSS, it's a Mandarin version of Grace's resume.",
@@ -38,6 +38,20 @@ export class ProjectsComponent {
       description:
         "It's the practice of weather api call with Axios to get weather information on different city.",
       url: 'https://weatherarduii.netlify.app/',
+    },
+    {
+      name: 'BitcoEx',
+      image: 'assets/project-images/bitco.png',
+      description:
+        'This project was implements by React without any logics, the purpose of this project is to practice my CSS and RWD skills.',
+      url: 'https://bitcoex.netlify.app/',
+    },
+    {
+      name: 'Planning App',
+      image: 'assets/project-images/appforfun.png',
+      description:
+        'This was my first Angular app, I was practicing different component communication through the service which act as a store and updating the state on each changes.',
+      url: 'https://appforfun.netlify.app/',
     },
     {
       name: 'The Navi Bar',
