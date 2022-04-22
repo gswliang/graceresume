@@ -12,14 +12,14 @@ export class ProjectsComponent {
 
   projects = [
     {
-      name: 'My Resume - English Version',
+      name: 'Resume - English Version',
       image: 'assets/project-images/resume-eng.png',
       description:
         "This project is implemented with Angular 13 and TailwindCSS, an English version of Grace's resume.",
       url: 'https://grace-resume.netlify.app/',
     },
     {
-      name: 'My Resume - Mandarin Version',
+      name: 'Resume - Mandarin Version',
       image: 'assets/project-images/resume-cht.png',
       description:
         "The resume is implemented with React and plain CSS, it's a Mandarin version of Grace's resume.",

@@ -15,8 +15,7 @@ interface Detail {
 })
 export class ResumeServiceService {
   aboutMe =
-    'I am a junior front-end developer with one year of experience, currently working with Typescript, HTML/CSS, passion about learning and buiding delightful and scalable web applications, fascinated of learning new knowledges to imporve my technical skills.';
-
+    'I am a Junior Frontend developer with one year of experience, currently work with Angular, Typescript and HTML/CSS, passion about learning and building delightful and scalable web applications, fascinated of learning new knowledge to improve my technical skills.';
   withIcon: Detail[] = [
     {
       name: 'Email',
