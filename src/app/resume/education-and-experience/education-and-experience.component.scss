@@ -8,9 +8,3 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-@layer component {
-  .container-title {
-    @apply h-12 font-bold font-medium text-stone-700 underline underline-offset-8 decoration-blue-400;
-  }
-}

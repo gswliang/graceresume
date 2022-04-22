@@ -69,7 +69,7 @@ export class SkillsComponent {
       plan: 'Practicing algorithms and data structures during my free time.',
     },
     {
-      plan: 'Doing some researches of web performance, webpack, CI/CD ...etc',
+      plan: 'Doing some researches of web performance, webpack, CI/CD ...etc.',
     },
   ];
 }

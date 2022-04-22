@@ -8,7 +8,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 })
 export class ProjectsComponent {
   @HostBinding('class') class =
-    'h-screen w-screen overflow-x-hidden py-8 pt-14 md:mt-2 pt-8';
+    'h-screen w-screen overflow-x-hidden pb-8 pt-16 md:pt-8';
 
   projects = [
     {

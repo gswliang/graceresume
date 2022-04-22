@@ -7,5 +7,5 @@
 @tailwind utilities;
 
 .title {
-  @apply font-bold h-12 text-3xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400;
+  @apply font-bold h-12 text-2xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400 md:text-3xl;
 }
