@@ -12,7 +12,7 @@ interface Skills {
 })
 export class SkillsComponent {
   @HostBinding('class') class =
-    'h-screen w-screen overflow-x-hidden mt-14 md:mt-2';
+    'h-screen w-screen overflow-x-hidden pt-14 md:pt-2';
 
   focusSkills: Skills[] = [
     { name: 'Javascript', icon: 'javascript' },
@@ -33,39 +33,43 @@ export class SkillsComponent {
       name: 'Algorithm & Data Structure',
       image: 'assets/icons/leetcode.png',
     },
+    {
+      name: 'CI/CD',
+      image: 'assets/icons/cicd.png',
+    },
+    {
+      name: 'WebPack',
+      image: 'assets/icons/webpack.png',
+    },
   ];
 
   focusOn = [
     {
-      point: 'Currently work with Angular,Typescript,RxJS in daily basis.',
+      point:
+        'I am currently work with Angular, Typescript and RxJS in daily basis.',
     },
     {
       point:
-        'I work with CSS/SCSS at work and TailwindCSS for my own projects.',
+        'I work with plain CSS/SCSS and Angular Material at work; TailwindCSS for my own projects.',
     },
     {
       point:
-        'Learning to combine Angular Material and TaiwindCSS with better approaches.',
-    },
-
-    {
-      point:
-        'Building a handy and customizable image magnifier component with npm.',
+        'Learning the combination of Angular Material and TailwindCSS with better approaches.',
     },
   ];
 
   plansDescription = [
     {
-      plan: 'I used to practice with React, I am planning to have more project on React lately.',
+      plan: 'I used to learned/practice with React, I am planning to have more project on React lately.',
     },
     {
-      plan: 'Building restapi and databases will makes my projects more flexible, plan to learn some backend knowledges.',
+      plan: 'Building restapi and databases will makes my projects more flexible, plan to learn some backend skills.',
     },
     {
-      plan: 'Keep practicing algorithms by doing some leetcode during my free hours.',
+      plan: 'Practicing algorithms and data structures during my free time.',
     },
     {
-      plan: 'Study system design and get code clean',
+      plan: 'Doing some researches of web performance, webpack, CI/CD ...etc',
     },
   ];
 }
