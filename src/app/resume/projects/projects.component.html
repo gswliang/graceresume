@@ -1,0 +1,36 @@
+<div class="mx-8 flex flex-col h-auto md:mx-18">
+  <div class="title">Projects</div>
+  <div class="flex gap-4 flex-wrap pt-4">
+    <div
+      class="flex flex-col w-96 bg-neutral-100 rounded-lg border border-gray-200 shadow-md hover:shadow-zinc-500/50 rounded-lg duration-600 ease-in-out"
+      *ngFor="let project of projects"
+    >
+      <img
+        class="w-full h-52 rounded-t-lg"
+        [src]="project.image"
+        loading="lazy"
+        [alt]="project.name"
+      />
+      <div class="p-2 h-44">
+        <h1
+          class="text-2xl font-bold text-black cursor-pointer"
+          (click)="onClick(project.url)"
+        >
+          {{ project.name }}
+        </h1>
+
+        <div class="text-lg pt-4 text-gray-600 font-sans">
+          {{ project.description }}
+        </div>
+      </div>
+      <div class="flex justify-center pb-4">
+        <button
+          class="w-28 h-8 inline-flex justify-center text-md leading-8 font-md text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-2 focus:outline-none"
+          (click)="onClick(project.url)"
+        >
+          Visit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
