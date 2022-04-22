@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  HostBinding,
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-education-and-experience',
@@ -11,13 +6,9 @@ import {
   styleUrls: ['./education-and-experience.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EducationAndExperienceComponent implements OnInit {
+export class EducationAndExperienceComponent {
   @HostBinding('class') class =
-    'mx-4 md:mx-20 overflow-x-hidden relative mt-14 md:mt-2';
-
-  constructor() {}
-
-  ngOnInit(): void {}
+    'mx-4 md:mx-20 overflow-x-hidden relative pt-14 md:pt-2';
 
   education = [
     {
