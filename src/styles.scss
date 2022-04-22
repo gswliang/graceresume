@@ -5,3 +5,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.title {
+  @apply font-bold h-12 text-3xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400;
+}
