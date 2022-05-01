@@ -6,9 +6,11 @@ import {
   AfterViewInit,
   ElementRef,
 } from '@angular/core';
-import { fromEvent, pluck } from 'rxjs';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { BehaviorSubject, fromEvent, pluck } from 'rxjs';
 import { ResumeServiceService } from '../serivce/resume-service.service';
 
+@UntilDestroy()
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,7 +25,7 @@ export class HeaderComponent implements AfterViewInit {
   aboutMe$ = this.resumeService.myDetails$.pipe(pluck('about'));
   withIcon$ = this.resumeService.myDetails$.pipe(pluck('icon'));
   withImages$ = this.resumeService.myDetails$.pipe(pluck('image'));
-  isImgLoad = false;
+  isImageLoading$ = new BehaviorSubject<boolean>(true);
   constructor(private readonly resumeService: ResumeServiceService) {}
 
   ngAfterViewInit() {
@@ -31,6 +33,8 @@ export class HeaderComponent implements AfterViewInit {
     this.handleImageInit();
   }
   handleImageInit() {
-    fromEvent(this.imageTemp, 'load').subscribe(() => (this.isImgLoad = true));
+    fromEvent(this.imageTemp, 'load')
+      .pipe(untilDestroyed(this))
+      .subscribe(() => this.isImageLoading$.next(false));
   }
 }

@@ -1,14 +1,28 @@
-import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  HostBinding,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { BehaviorSubject, fromEvent } from 'rxjs';
 
+@UntilDestroy()
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements AfterViewInit {
+  @ViewChild('myImg') myImg!: ElementRef;
   @HostBinding('class') class =
     'h-screen w-screen overflow-x-hidden pb-8 pt-16 md:pt-8';
+
+  imageIsLoading$ = new BehaviorSubject<boolean>(true);
+  imageElement!: HTMLImageElement;
 
   projects = [
     {
@@ -61,6 +75,17 @@ export class ProjectsComponent {
       url: 'https://navibar.netlify.app/',
     },
   ];
+
+  ngAfterViewInit() {
+    this.imageElement = this.myImg?.nativeElement;
+    this.handleImageLoadingEvent();
+  }
+
+  handleImageLoadingEvent() {
+    fromEvent(this.imageElement, 'load')
+      .pipe(untilDestroyed(this))
+      .subscribe(() => this.imageIsLoading$.next(false));
+  }
 
   onClick(url: string) {
     if (!url) {

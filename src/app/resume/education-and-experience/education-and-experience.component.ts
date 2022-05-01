@@ -1,13 +1,27 @@
-import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  HostBinding,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+} from '@angular/core';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { BehaviorSubject, fromEvent } from 'rxjs';
 
+@UntilDestroy()
 @Component({
   selector: 'app-education-and-experience',
   templateUrl: './education-and-experience.component.html',
   styleUrls: ['./education-and-experience.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EducationAndExperienceComponent {
+export class EducationAndExperienceComponent implements AfterViewInit {
+  @ViewChild('myImage') myImage!: ElementRef;
   @HostBinding('class') class = 'screen';
+
+  imgElement!: HTMLImageElement;
+  imageIsLoading$ = new BehaviorSubject<boolean>(true);
 
   education = [
     {
@@ -56,4 +70,15 @@ export class EducationAndExperienceComponent {
       description: '',
     },
   ];
+
+  ngAfterViewInit() {
+    this.imgElement = this.myImage?.nativeElement;
+    this.handleImageLoading();
+  }
+
+  handleImageLoading() {
+    fromEvent(this.imgElement, 'load')
+      .pipe(untilDestroyed(this))
+      .subscribe(() => this.imageIsLoading$.next(false));
+  }
 }

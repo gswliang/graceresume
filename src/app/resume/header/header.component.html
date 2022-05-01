@@ -3,7 +3,9 @@
     class="flex flex-col items-center py-2 h-full bg-zinc-100 gap-3 border-2 shadow-lg shadow-zinc-500/50 rounded-lg px-4 md:flex-row lg:h-72"
   >
     <div class="header-image">
-      <app-loading-indicator *ngIf="isImgLoad"></app-loading-indicator>
+      <app-loading-indicator
+        *ngIf="isImageLoading$ | async"
+      ></app-loading-indicator>
       <img
         #myImg
         class="flex-none rounded-full h-36 w-36 pt-3 md:h-44 md:w-44"

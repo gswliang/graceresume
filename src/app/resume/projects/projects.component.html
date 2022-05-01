@@ -5,12 +5,18 @@
       class="flex flex-col w-96 bg-neutral-100 rounded-lg border border-gray-200 shadow-md hover:shadow-zinc-500/50 rounded-lg duration-600 ease-in-out"
       *ngFor="let project of projects"
     >
-      <img
-        class="w-full h-52 rounded-t-lg"
-        [src]="project.image"
-        loading="lazy"
-        [alt]="project.name"
-      />
+      <div class="relative">
+        <app-loading-indicator
+          *ngIf="imageIsLoading$ | async"
+        ></app-loading-indicator>
+        <img
+          #myImg
+          class="w-full h-52 rounded-t-lg"
+          [src]="project.image"
+          loading="lazy"
+          [alt]="project.name"
+        />
+      </div>
       <div class="p-2 h-44">
         <h1
           class="text-2xl font-bold text-black cursor-pointer"
