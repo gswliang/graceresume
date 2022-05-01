@@ -30,7 +30,7 @@ export class SkillsComponent {
     { name: 'React', icon: 'react' },
     { name: 'NodeJs', icon: 'node' },
     {
-      name: 'Algorithm & Data Structure',
+      name: 'Leetcode',
       image: 'assets/icons/leetcode.png',
     },
     {
