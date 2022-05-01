@@ -1,0 +1,5 @@
+@layer component {
+  .header-image {
+    @apply relative flex rounded-full items-center justify-center w-64;
+  }
+}
