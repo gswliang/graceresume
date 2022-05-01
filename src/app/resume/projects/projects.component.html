@@ -17,7 +17,7 @@
           [alt]="project.name"
         />
       </div>
-      <div class="p-2 h-44">
+      <div class="p-2 h-48 md:h-44">
         <h1
           class="text-2xl font-bold text-black cursor-pointer"
           (click)="onClick(project.url)"
@@ -29,7 +29,7 @@
           {{ project.description }}
         </div>
       </div>
-      <div class="flex justify-center pb-4">
+      <div class="flex justify-center my-2">
         <button
           class="w-28 h-8 inline-flex justify-center text-md leading-8 font-md text-center text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-2 focus:outline-none"
           (click)="onClick(project.url)"
