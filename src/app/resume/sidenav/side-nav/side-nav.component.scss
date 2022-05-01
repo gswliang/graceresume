@@ -1,5 +1,5 @@
 @layer component {
   .dropdown-panel {
-    @apply w-full absolute top-[-320px] z-[0] transition-all ease-in-out duration-500 bg-blue-500 md:static md:z-[1];
+    @apply w-full absolute z-[0] transition-all ease-in-out duration-500 bg-blue-500 md:static md:z-[1];
   }
 }

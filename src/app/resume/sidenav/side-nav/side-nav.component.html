@@ -12,7 +12,10 @@
       >{{ openNav ? "close" : "menu" }}</mat-icon
     >
   </div>
-  <div class="dropdown-panel" [class.top-14]="openNav">
+  <div
+    [style.top.rem]="openNav ? showSideNav : hideSideNav"
+    class="dropdown-panel"
+  >
     <div
       class="flex h-20 text-white cursor-pointer px-4 justify-start gap-2 hover:scale-105 duration-300"
       *ngFor="let sidenav of sideNav"

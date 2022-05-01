@@ -33,6 +33,8 @@ export class SideNavComponent {
     },
   ];
   openNav = false;
+  hideSideNav = '-20.5';
+  showSideNav = '3.5';
 
   constructor(
     private readonly router: Router,
