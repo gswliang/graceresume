@@ -7,7 +7,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
   @HostBinding('class') class =
-    'flex flex-col md:flex-row h-full w-full font-sans';
+    'flex flex-col md:flex-row h-full w-full font-sans relative';
 
   constructor() {}
 

@@ -7,6 +7,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./resume/resume.module').then((m) => m.ResumeModule),
   },
+  { path: 'share', loadChildren: () => import('./share/share.module').then(m => m.ShareModule) },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 

@@ -10,6 +10,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EducationAndExperienceComponent } from './education-and-experience/education-and-experience.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ShareModule } from '../share/share.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { ProjectsComponent } from './projects/projects.component';
     EducationAndExperienceComponent,
     ProjectsComponent,
   ],
-  imports: [CommonModule, ResumeRoutingModule, MatIconModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    ResumeRoutingModule,
+    MatIconModule,
+    HttpClientModule,
+    ShareModule,
+  ],
   exports: [HeaderComponent, SideNavComponent, EducationAndExperienceComponent],
 })
 export class ResumeModule {}
