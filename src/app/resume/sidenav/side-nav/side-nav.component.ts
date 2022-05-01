@@ -47,4 +47,8 @@ export class SideNavComponent {
 
     this.router.navigate([selectedPath], { relativeTo: this.route });
   }
+
+  clickOutside() {
+    this.openNav = false;
+  }
 }

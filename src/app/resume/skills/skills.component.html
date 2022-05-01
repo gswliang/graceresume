@@ -8,7 +8,12 @@
             *ngFor="let focus of focusSkills"
             class="h-16 w-16 flex items-center hover:animate-wiggle md:h-20 w-20"
           >
-            <mat-icon class="skills" [svgIcon]="focus.icon"></mat-icon>
+            <mat-icon
+              [matTooltip]="focus.name"
+              matTooltipPosition="right"
+              class="skills"
+              [svgIcon]="focus.icon"
+            ></mat-icon>
           </div>
         </div>
       </div>
@@ -39,13 +44,21 @@
             class="h-16 w-16 flex items-center hover:animate-wiggle md:h-20 w-20"
           >
             <mat-icon
+              [matTooltip]="plan.name"
+              matTooltipPosition="right"
               class="skills"
               *ngIf="plan.icon; else useImage"
               [svgIcon]="plan.icon"
             ></mat-icon>
 
             <ng-template #useImage>
-              <img [src]="plan.image" loading="lazy" [alt]="plan.name" />
+              <img
+                [matTooltip]="plan.name"
+                matTooltipPosition="right"
+                [src]="plan.image"
+                loading="lazy"
+                [alt]="plan.name"
+              />
             </ng-template>
           </div>
         </div>
