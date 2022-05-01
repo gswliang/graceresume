@@ -7,8 +7,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EducationAndExperienceComponent {
-  @HostBinding('class') class =
-    'mx-4 md:mx-20 overflow-x-hidden relative pt-14 md:pt-2';
+  @HostBinding('class') class = 'screen';
 
   education = [
     {

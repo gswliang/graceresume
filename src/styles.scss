@@ -9,3 +9,7 @@
 .title {
   @apply font-bold h-12 text-2xl font-medium text-stone-700 underline underline-offset-8 decoration-blue-400 md:text-3xl;
 }
+
+.screen {
+  @apply h-screen mx-4 md:mx-20 overflow-x-hidden relative pt-14 md:pt-2;
+}
