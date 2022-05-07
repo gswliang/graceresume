@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { untilDestroyed, UntilDestroy } from '@ngneat/until-destroy';
-import { BehaviorSubject, fromEvent, tap } from 'rxjs';
+import { BehaviorSubject, fromEvent } from 'rxjs';
 
 @UntilDestroy()
 @Component({
