@@ -23,7 +23,7 @@ export class SkillsComponent {
     { name: 'CSS 3', icon: 'css' },
     { name: 'npm', icon: 'npm' },
     { name: 'Git', icon: 'git' },
-    { name: 'Tailwin', icon: 'tailwind' },
+    { name: 'TailwinCSS', icon: 'tailwind' },
   ];
 
   planToLearn = [
