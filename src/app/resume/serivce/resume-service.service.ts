@@ -54,6 +54,11 @@ export class ResumeServiceService {
       image: 'assets/icons/github.png',
       data: 'https://github.com/gswliang',
     },
+    {
+      name: 'Linkedln',
+      image: 'assets/icons/linkedln.png',
+      data: 'https://www.linkedin.com/in/shu-wen-liang/',
+    },
   ];
 
   details$ = new BehaviorSubject<any>({
