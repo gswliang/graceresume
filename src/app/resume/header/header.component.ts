@@ -12,6 +12,7 @@ export class HeaderComponent {
   @HostBinding('class') class = 'screen';
 
   imageSrc = '/assets/grace.jpeg';
+  imageClass = 'flex-none rounded-full h-36 w-36 pt-3 md:h-44 md:w-44';
   aboutMe$ = this.resumeService.myDetails$.pipe(pluck('about'));
   withIcon$ = this.resumeService.myDetails$.pipe(pluck('icon'));
   withImages$ = this.resumeService.myDetails$.pipe(pluck('image'));

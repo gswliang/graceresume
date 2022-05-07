@@ -17,6 +17,7 @@ import { BehaviorSubject, fromEvent, tap } from 'rxjs';
 export class BaseImageComponent implements AfterViewInit {
   @Input() imageSrc: string;
   @Input() imageName: string;
+  @Input() imageClass: string;
   @ViewChild('baseImage') baseImage: ElementRef;
 
   imageTemp: HTMLImageElement;

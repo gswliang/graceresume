@@ -9,6 +9,7 @@ import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 export class EducationAndExperienceComponent {
   @HostBinding('class') class = 'screen';
 
+  imageClass = 'w-28 h-24 md:w-40 md:h-36 px-2';
   education = [
     {
       year: '1999 - 2004',

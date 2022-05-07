@@ -13,6 +13,7 @@ export class ProjectsComponent {
 
   imageIsLoading$ = new BehaviorSubject<boolean>(true);
   imageElement!: HTMLImageElement;
+  imageClass = 'w-full h-52 rounded-t-lg';
 
   projects = [
     {
