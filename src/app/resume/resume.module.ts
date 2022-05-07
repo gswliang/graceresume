@@ -13,6 +13,7 @@ import { EducationAndExperienceComponent } from './education-and-experience/educ
 import { ProjectsComponent } from './projects/projects.component';
 import { ShareModule } from '../share/share.module';
 import { ClickOutsideDirective } from './directive/click-outside.directive';
+import { BaseImageComponent } from './shared/base-image/base-image.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ClickOutsideDirective } from './directive/click-outside.directive';
     EducationAndExperienceComponent,
     ProjectsComponent,
     ClickOutsideDirective,
+    BaseImageComponent,
   ],
   imports: [
     CommonModule,

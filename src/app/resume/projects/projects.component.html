@@ -6,16 +6,10 @@
       *ngFor="let project of projects"
     >
       <div class="relative">
-        <app-loading-indicator
-          *ngIf="imageIsLoading$ | async"
-        ></app-loading-indicator>
-        <img
-          #myImg
-          class="w-full h-52 rounded-t-lg"
-          [src]="project.image"
-          loading="lazy"
-          [alt]="project.name"
-        />
+        <app-base-image
+          [imageSrc]="project.image"
+          [imageName]="project.name"
+        ></app-base-image>
       </div>
       <div class="p-2 h-48 md:h-44">
         <h1
