@@ -1,0 +1,8 @@
+<app-loading-indicator *ngIf="isImageLoading$ | async"></app-loading-indicator>
+<img
+  #baseImage
+  [class]="imageClass"
+  loading="lazy"
+  [src]="imageSrc"
+  [alt]="imageName"
+/>

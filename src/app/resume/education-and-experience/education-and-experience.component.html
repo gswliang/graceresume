@@ -9,16 +9,11 @@
         <div
           class="w-40 h-40 flex justify-center items-center aspect-square relative"
         >
-          <app-loading-indicator
-            *ngIf="imageIsLoading$ | async"
-          ></app-loading-indicator>
-          <img
-            #myImage
-            class="w-28 h-24 md:w-40 md:h-36 px-2"
-            [src]="edu.logo"
-            loading="lazy"
-            [alt]="edu.insititute"
-          />
+          <app-base-image
+            [imageSrc]="edu.logo"
+            [imageName]="edu.institute"
+            [imageClass]="imageClass"
+          ></app-base-image>
         </div>
 
         <div class="flex flex-col gap-2">
@@ -26,7 +21,7 @@
             {{ edu.year }}
           </h3>
           <h3 class="text-lg text-gray-700 decoration-8 md:text-2xl">
-            {{ edu.insititute }}
+            {{ edu.institute }}
           </h3>
           <h3 class="text-md text-gray-600 decoration-3 md:text-xl">
             {{ edu.major }}

@@ -1,38 +1,25 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  HostBinding,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-} from '@angular/core';
-import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
-import { BehaviorSubject, fromEvent } from 'rxjs';
+import { Component, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 
-@UntilDestroy()
 @Component({
   selector: 'app-education-and-experience',
   templateUrl: './education-and-experience.component.html',
   styleUrls: ['./education-and-experience.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class EducationAndExperienceComponent implements AfterViewInit {
-  @ViewChild('myImage') myImage!: ElementRef;
+export class EducationAndExperienceComponent {
   @HostBinding('class') class = 'screen';
 
-  imgElement!: HTMLImageElement;
-  imageIsLoading$ = new BehaviorSubject<boolean>(true);
-
+  imageClass = 'w-28 h-24 md:w-40 md:h-36 px-2';
   education = [
     {
       year: '1999 - 2004',
-      insititute: 'Willowridge High School',
+      institute: 'Willowridge High School',
       major: 'High School',
       logo: 'assets/willowridge.png',
     },
     {
       year: '2017 - 2021',
-      insititute: 'National Chi-Nan University',
+      institute: 'National Chi-Nan University',
       major: 'Bachelor of Computer Science and Information Engineering',
       logo: 'assets/ncnu.png',
     },
@@ -70,15 +57,4 @@ export class EducationAndExperienceComponent implements AfterViewInit {
       description: '',
     },
   ];
-
-  ngAfterViewInit() {
-    this.imgElement = this.myImage?.nativeElement;
-    this.handleImageLoading();
-  }
-
-  handleImageLoading() {
-    fromEvent(this.imgElement, 'load')
-      .pipe(untilDestroyed(this))
-      .subscribe(() => this.imageIsLoading$.next(false));
-  }
 }
