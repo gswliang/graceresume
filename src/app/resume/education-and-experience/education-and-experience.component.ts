@@ -34,7 +34,7 @@ export class EducationAndExperienceComponent {
       description:
         'CBX software, the Product Life Management SaaS system provider, my main job as a junior developer is to:',
       items: [
-        'Maintain and improve the current system',
+        'Maintain and improve the current structure',
         'UI adjustment',
         'Discuss with backend member for the structure of REST api',
         'New features implementation (such as image magnifier, QRcode scanner, indexedDB...etc)',
