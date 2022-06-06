@@ -29,30 +29,38 @@ export class EducationAndExperienceComponent {
     {
       company: 'CBX Software',
       title: 'Frontend Developer',
-      time: '2021/07 ~ Present',
+      duration: '2021/07 ~ Present',
       place: 'Taipei, Taiwan',
       description:
-        'Maintain and building new features of a Product Life Management Software, assit the frontend teams to build different re-useable and scalable components based on complex structures.',
+        'CBX software, the Product Life Management SaaS system provider, my main job as a junior developer is to:',
+      items: [
+        'Maintain and improve the current system',
+        'UI adjustment',
+        'Discuss with backend member for the structure of REST api',
+        'New features implementation (such as image magnifier, QRcode scanner, indexedDB...etc)',
+        'Legacy code refactor',
+      ],
     },
+
     {
       company: 'Plainliv Company limited Co. Ltd.',
       title: 'Intern Embedded Software Engineer',
-      time: '2020/04 ~ 2021/02',
+      duration: '2020/04 ~ 2021/02',
       place: 'Taichung, Taiwan',
       description:
-        'Using Nordic nRF 51822 with the sensor to detect the water quality, daily usages, electricity volts...etcs, calculated the results, work with nRF connect, sending datas from nRF 51822 (MCU) through bluetooth to cellphone APP.',
+        'Using Nordic nRF 51822 with the sensor to detect the water quality, daily usages, electricity volts...etc, calculated the results, work with nRF connect, sending datas from nRF 51822 (MCU) through bluetooth to cellphone APP.',
     },
     {
       company: 'Sancardia Liquor Store',
       title: 'Shop owner',
-      time: '2014/11 ~ 2017/05',
+      duration: '2014/11 ~ 2017/05',
       place: 'Pretoria, South Africa',
       description: '',
     },
     {
       company: 'Repo Wild 15 (pty) Ltd',
       title: 'Sales Manager',
-      time: '2004/03 ~ 2014/06',
+      duration: '2004/03 ~ 2014/06',
       place: 'Pretoria, South Africa',
       description: '',
     },
