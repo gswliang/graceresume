@@ -57,7 +57,7 @@ export class ResumeServiceService {
     {
       name: 'Linkedln',
       image: 'assets/icons/linkedln.png',
-      data: 'https://www.linkedin.com/in/shu-wen-liang/',
+      data: 'https://www.linkedin.com/in/gswliang/',
     },
   ];
 
