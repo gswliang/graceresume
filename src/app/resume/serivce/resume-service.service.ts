@@ -68,6 +68,4 @@ export class ResumeServiceService {
   });
 
   myDetails$ = this.details$.asObservable();
-
-  constructor() {}
 }
