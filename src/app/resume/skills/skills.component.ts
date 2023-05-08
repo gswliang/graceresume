@@ -46,15 +46,15 @@ export class SkillsComponent {
   focusOn = [
     {
       point:
-        'I am currently work with Angular, Typescript and RxJS in daily basis.',
+        'I am available with Angular and Vue framework for web development.',
     },
     {
       point:
-        'I work with plain CSS/SCSS and Angular Material at work; TailwindCSS for my own projects.',
+        'I work with plain CSS/SCSS/Less at work; TailwindCSS for my own projects.',
     },
     {
       point:
-        'Learning the combination of Angular Material and TailwindCSS with better approaches.',
+        'Always keep myself updated with frontend skills, although there are tons of techs out there.',
     },
   ];
 
